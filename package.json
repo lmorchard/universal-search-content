@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "the iframe that we put inside the autocomplete dropdown",
   "main": "index.js",
+  "engines": {
+    "node": "0.10.x"
+  },
   "scripts": {
+    "start": "NODE_ENV=production harp server -p $PORT",
+    "dev": "harp server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +22,7 @@
   },
   "homepage": "https://github.com/mozilla/universal-search-content",
   "dependencies": {
+    "harp": "~0.12.1",
     "node-sass": "^2.1.1"
   }
 }
