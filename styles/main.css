@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  user-select: none; }
+
+body {
+  font-family: message-box, sans-serif;
+  margin: 0;
+  overflow: hidden;
+  padding: 0; }
+
+#top-hits {
+  margin-top: 14px; }
+
+.result-region {
+  margin: 0 6px;
+  max-width: 100%; }
+  .result-region .result-group-title {
+    color: #999999;
+    padding: 0 12px; }
+  .result-region ol {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .result-region .result {
+    align-items: center;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    padding: 5px 14px; }
+    .result-region .result:hover, .result-region .result.selected {
+      background: #0394dd; }
+      .result-region .result:hover .result-copy, .result-region .result.selected .result-copy {
+        color: #ffffff; }
+      .result-region .result:hover .result-url, .result-region .result.selected .result-url {
+        color: #ffffff; }
+      .result-region .result:hover .search-result, .result-region .result.selected .search-result {
+        background-position: 0 -16px; }
+      .result-region .result:hover .bookmark, .result-region .result.selected .bookmark {
+        background-position: -16px -16px; }
+  .result-region .icon {
+    display: block;
+    flex: 0 0 16px;
+    height: 16px;
+    margin-right: 6px; }
+    .result-region .icon.default-favicon {
+      background-image: url(/images/default-favicon@2x.png);
+      background-repeat: no-repeat;
+      background-size: 16px 16px; }
+      .result-region .icon.default-favicon img {
+        height: 16px;
+        width: 16px;
+        visibility: hidden; }
+  .result-region .search-result,
+  .result-region .bookmark {
+    background: url(/images/search-sprite@2x.png) no-repeat;
+    background-size: 48px 32px; }
+  .result-region .search-result {
+    background-position: 0 0; }
+  .result-region .bookmark {
+    background-position: -16px 0; }
+  .result-region .result-copy {
+    display: block;
+    flex: 1;
+    height: 14px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    top: 1px;
+    white-space: nowrap; }
+  .result-region .result-url {
+    color: #0394dd; }
