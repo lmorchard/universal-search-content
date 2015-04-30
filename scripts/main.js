@@ -171,6 +171,7 @@ var autocompleteSearchResultsView = new AutocompleteSearchResultsView({ el: $('#
 // Listen for key events from the chrome
 window.addEventListener('WebChannelMessageToContent', function (event) {
   var message = event.detail.message;
+  if (!message) { return; }
 
   if (message.type === 'navigational-key' && message.data) {
     // Down arrow and tab move down
